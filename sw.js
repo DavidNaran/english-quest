@@ -20,7 +20,7 @@ var OPTIONAL = ['fonts/OpenDyslexic-Regular.woff2', 'fonts/OpenDyslexic-Bold.wof
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) {
-    return c.addAll(FILES).then(function () {
+    return c.addAll(FILES.map(function (f) { return new Request(f, { cache: 'reload' }); })).then(function () {
       return Promise.all(OPTIONAL.map(function (f) { return c.add(f).catch(function () {}); }));
     });
   }).then(function () { return self.skipWaiting(); }));
