@@ -1,0 +1,100 @@
+/* ============================================================
+   tokens.css — Variables de diseño y accesibilidad.
+   js/a11y/settings.js modifica estas variables en <html>.
+   ============================================================ */
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: local("OpenDyslexic"), local("OpenDyslexic-Regular"),
+       url("../fonts/OpenDyslexic-Regular.woff2") format("woff2"),
+       url("../fonts/OpenDyslexic-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  font-weight: 700;
+  src: local("OpenDyslexic Bold"), local("OpenDyslexic-Bold"),
+       url("../fonts/OpenDyslexic-Bold.woff2") format("woff2"),
+       url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+:root {
+  /* Tipografía (ajustable) */
+  --font: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  --fs: 20px;
+  --ls: 0.03em;       /* espacio entre letras */
+  --ws: 0.12em;       /* espacio entre palabras */
+  --lh: 1.6;          /* altura de línea */
+
+  /* Colores (tema crema por defecto) */
+  --bg: #fbf5e9;
+  --bg-deco: #f3e8d2;
+  --surface: #ffffff;
+  --surface-2: #fff9ef;
+  --text: #2b2b2b;
+  --muted: #5d5a55;
+  --line: #d9cfbd;
+
+  --primary: #2f7d6d;      /* verde azulado */
+  --primary-ink: #ffffff;
+  --primary-soft: #dcefe9;
+  --accent: #c8611c;       /* naranja (contraste AA con blanco) */
+  --accent-soft: #fde6d4;
+  --grammar: #6a4fb3;      /* morado gramática */
+  --grammar-soft: #ece6fa;
+  --exam: #b2443c;         /* rojo teja exámenes */
+  --exam-soft: #f9e1de;
+  --gold: #a46a00;
+  --gold-soft: #fff0c7;
+
+  --ok: #1f7a3a;
+  --ok-soft: #e2f4e6;
+  --warn: #8a5a00;
+  --warn-soft: #fff1d0;
+  --info: #24589e;
+  --info-soft: #e3edfa;
+
+  /* Bloques del esquema gramatical */
+  --blk-subj: #dbeafe;
+  --blk-modal: #fde68a;
+  --blk-neg: #fecaca;
+  --blk-verb: #bbf7d0;
+  --blk-conn: #e9d5ff;
+  --blk-other: #f1f5f9;
+
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 2px 0 rgba(0,0,0,.06), 0 6px 18px rgba(60, 40, 10, .08);
+  --tap: 56px;        /* tamaño mínimo de botón */
+  --gap: 14px;
+  --dur: 220ms;       /* duración de animaciones (0 si están desactivadas) */
+}
+
+/* ---------- Fondos alternativos ---------- */
+:root[data-bg="peach"] { --bg: #fcebdd; --bg-deco: #f6d9c2; --surface-2: #fff6ee; }
+:root[data-bg="blue"]  { --bg: #e6f0fa; --bg-deco: #d2e3f4; --surface-2: #f4f9ff; }
+:root[data-bg="green"] { --bg: #e7f4ea; --bg-deco: #d3eadb; --surface-2: #f4fbf6; }
+:root[data-bg="grey"]  { --bg: #eeeeec; --bg-deco: #dddcd8; --surface-2: #f8f8f6; }
+:root[data-bg="white"] { --bg: #ffffff; --bg-deco: #f2f2f2; --surface-2: #fafafa; }
+:root[data-bg="dark"] {
+  --bg: #1f2430; --bg-deco: #2a3040; --surface: #2b3242; --surface-2: #323a4c;
+  --text: #f1ede4; --muted: #c9c3b8; --line: #4a5266;
+  --primary: #5fc2ab; --primary-ink: #10241f; --primary-soft: #23403a;
+  --accent: #f3a467; --accent-soft: #4a3424;
+  --grammar: #b9a4f2; --grammar-soft: #362e52;
+  --exam: #f0918a; --exam-soft: #4a2c2a;
+  --gold: #f2c45a; --gold-soft: #45391c;
+  --ok: #7ad69a; --ok-soft: #1f3b2a; --warn: #f2c45a; --warn-soft: #45391c;
+  --info: #93b9f0; --info-soft: #24324a;
+  --blk-subj: #2c4466; --blk-modal: #5a4b16; --blk-neg: #5b2b2b; --blk-verb: #24523a; --blk-conn: #4a3566; --blk-other: #3a4152;
+  --shadow: 0 2px 0 rgba(0,0,0,.25), 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* ---------- Movimiento ---------- */
+:root[data-motion="off"] { --dur: 0ms; }
+:root[data-motion="off"] *, :root[data-motion="off"] *::before, :root[data-motion="off"] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}

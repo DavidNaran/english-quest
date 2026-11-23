@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>English Quest</title>
+  <meta name="description" content="Prepara tu examen de inglés: could, couldn't, conectores y vocabulario de la Unit 2.">
+  <meta name="theme-color" content="#2f7d6d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="English Quest">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/exercises.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <header class="topbar no-print" role="banner">
+    <a class="topbar-home" href="#/home" aria-label="Ir al inicio">
+      <span class="logo" aria-hidden="true">🐱</span><span class="topbar-title">English Quest</span>
+    </a>
+    <nav class="topbar-actions" aria-label="Accesos rápidos">
+      <a class="icon-btn" href="#/progress" aria-label="Mi progreso"><span aria-hidden="true">⭐</span><span class="icon-btn-label" id="star-count">0</span></a>
+      <a class="icon-btn" href="#/settings" aria-label="Ajustes"><span aria-hidden="true">⚙️</span><span class="icon-btn-label">Ajustes</span></a>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <div id="print-root" class="print-only" aria-hidden="true"></div>
+  <div id="toast-root" class="no-print" aria-live="polite"></div>
+  <div id="modal-root" class="no-print"></div>
+
+  <!-- Núcleo -->
+  <script src="js/ui/dom.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/timer.js"></script>
+  <script src="js/a11y/settings.js"></script>
+  <script src="js/a11y/speech.js"></script>
+  <!-- Contenidos -->
+  <script src="js/art/vocab-icons.js"></script>
+  <script src="js/content/vocab.js"></script>
+  <script src="js/content/grammar-cards.js"></script>
+  <script src="js/content/bank-could.js"></script>
+  <script src="js/content/bank-connectors.js"></script>
+  <script src="js/content/bank-vocab.js"></script>
+  <script src="js/content/bank-sentences.js"></script>
+  <script src="js/content/bank-mixed.js"></script>
+  <script src="js/content/exams.js"></script>
+  <script src="js/content/index.js"></script>
+  <!-- Motor -->
+  <script src="js/engine/normalize.js"></script>
+  <script src="js/engine/diff.js"></script>
+  <script src="js/engine/checker.js"></script>
+  <script src="js/engine/srs.js"></script>
+  <script src="js/engine/picker.js"></script>
+  <script src="js/engine/feedback.js"></script>
+  <script src="js/engine/rewards.js"></script>
+  <!-- Interfaz -->
+  <script src="js/ui/components.js"></script>
+  <script src="js/exercises/renderers.js"></script>
+  <script src="js/ui/runner.js"></script>
+  <script src="js/print/sheets.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/ui/screens/start.js"></script>
+  <script src="js/ui/screens/home.js"></script>
+  <script src="js/ui/screens/vocab.js"></script>
+  <script src="js/ui/screens/grammar.js"></script>
+  <script src="js/ui/screens/practice.js"></script>
+  <script src="js/ui/screens/exam.js"></script>
+  <script src="js/ui/screens/progress.js"></script>
+  <script src="js/ui/screens/parents.js"></script>
+  <script src="js/ui/screens/settings.js"></script>
+  <script src="js/ui/screens/print.js"></script>
+  <script src="js/core/app.js"></script>
+</body>
+</html>

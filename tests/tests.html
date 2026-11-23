@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tests · English Quest</title>
+  <style>
+    body { font-family: Verdana, sans-serif; margin: 20px; background: #fbf5e9; color: #222; }
+    h1 { font-size: 1.4rem; }
+    .pass { color: #1f7a3a; } .fail { color: #b2443c; font-weight: 700; }
+    li { margin: 3px 0; font-size: .9rem; }
+    #summary { font-size: 1.2rem; font-weight: 700; padding: 10px; border: 3px solid; border-radius: 10px; display: inline-block; }
+    pre { background: #fff; padding: 8px; border-radius: 8px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Tests de English Quest</h1>
+  <p>Se ejecutan solos al abrir esta página. No modifican el progreso guardado (usan un almacén en memoria).</p>
+  <div id="summary">Ejecutando…</div>
+  <div id="out"></div>
+  <script>
+    // Aislar los tests del progreso real
+    try { var __k = 'eq.v1'; window.__saved = localStorage.getItem(__k); } catch (e) {}
+  </script>
+  <script src="../js/ui/dom.js"></script>
+  <script>
+    // Almacén en memoria para los tests
+    (function () {
+      var real = Storage.prototype.setItem;
+      Storage.prototype.setItem = function (k, v) { if (k === 'eq.v1') return; return real.apply(this, arguments); };
+      var realGet = Storage.prototype.getItem;
+      Storage.prototype.getItem = function (k) { if (k === 'eq.v1') return null; return realGet.apply(this, arguments); };
+    })();
+  </script>
+  <script src="../js/core/store.js"></script>
+  <script src="../js/core/timer.js"></script>
+  <script src="../js/a11y/settings.js"></script>
+  <script src="../js/a11y/speech.js"></script>
+  <script src="../js/art/vocab-icons.js"></script>
+  <script src="../js/content/vocab.js"></script>
+  <script src="../js/content/grammar-cards.js"></script>
+  <script src="../js/content/bank-could.js"></script>
+  <script src="../js/content/bank-connectors.js"></script>
+  <script src="../js/content/bank-vocab.js"></script>
+  <script src="../js/content/bank-sentences.js"></script>
+  <script src="../js/content/bank-mixed.js"></script>
+  <script src="../js/content/exams.js"></script>
+  <script src="../js/content/index.js"></script>
+  <script src="../js/engine/normalize.js"></script>
+  <script src="../js/engine/diff.js"></script>
+  <script src="../js/engine/checker.js"></script>
+  <script src="../js/engine/srs.js"></script>
+  <script src="../js/engine/picker.js"></script>
+  <script src="../js/ui/components.js"></script>
+  <script src="../js/engine/feedback.js"></script>
+  <script src="../js/engine/rewards.js"></script>
+  <script src="../js/print/sheets.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
