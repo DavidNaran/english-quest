@@ -236,7 +236,7 @@
           h('p', null, 'Has acertado ', h('b', null, rw.firstOk + ' de ' + rw.total), ' a la primera' + (rw.fixed ? ' y has corregido ' + rw.fixed + ' con tu esfuerzo.' : '.')),
           h('div', null, h('h2', null, 'Has ganado ' + rw.stars + ' ' + (rw.stars === 1 ? 'estrella' : 'estrellas')), h('ul', { class: 'list-plain' }, rw.reasons.map(function (t) { return h('li', null, t); }))),
           rw.badges.length ? h('div', { class: 'notice' }, h('b', null, '¡Nueva insignia! '), rw.badges.map(function (b) { return b.icon + ' ' + b.name; }).join(' · ')) : null,
-          h('a', { class: 'btn start-btn block', href: '#/start' }, '🐱 Siguiente con Kiko ▶'),
+          h('a', { class: 'btn start-btn block', href: '#/start' }, '🐱 Siguiente con Zarra ▶'),
           h('div', { class: 'btn-row' },
             opts.again ? h('button', { type: 'button', class: 'btn secondary', onclick: opts.again }, '🔁 Otra tanda') : null,
             wrong.length ? h('button', { type: 'button', class: 'btn accent', onclick: function () { EQ.store.data.tmpReview = wrong; location.hash = '#/review?ids=last'; } }, '🎯 Practicar lo que he fallado') : null,

@@ -154,7 +154,7 @@
       '<rect x="54" y="14" width="8" height="24" rx="2" fill="#ff6b5b" transform="rotate(15 58 26)"/>', 'pocket')
   };
 
-  /* Kiko, la gata exploradora (guía) */
+  /* Zarra, la gata exploradora (guía) */
   var CAT_FACE =
     '<polygon points="18,46 24,12 46,30" fill="#f2a65a"/><polygon points="24,38 27,20 39,30" fill="#f7b8c4"/>' +
     '<polygon points="82,46 76,12 54,30" fill="#f2a65a"/><polygon points="76,38 73,20 61,30" fill="#f7b8c4"/>' +

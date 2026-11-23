@@ -76,7 +76,7 @@
       h('div', { class: 'setting' }, h('span', { class: 'setting-title' }, '🔊 Voz'),
         rateRow, h('div', { style: { marginTop: '10px' } }, toggle('autoRead', 'Leer las instrucciones en voz alta automáticamente')),
         h('div', { style: { marginTop: '10px' } }, voiceBox),
-        h('div', { class: 'btn-row' }, EQ.speech.button('Hello! When I was five, I could swim.', { showLabel: 'Probar inglés' }), EQ.speech.button('Hola, soy Kiko. ¡Vamos a aprender inglés!', { lang: 'es', showLabel: 'Probar español' }))),
+        h('div', { class: 'btn-row' }, EQ.speech.button('Hello! When I was five, I could swim.', { showLabel: 'Probar inglés' }), EQ.speech.button('Hola, soy Zarra. ¡Vamos a aprender inglés!', { lang: 'es', showLabel: 'Probar español' }))),
       h('div', { class: 'setting' }, h('button', { type: 'button', class: 'btn secondary', onclick: function () { S.reset(); rerender(); EQ.ui.toast('Ajustes como al principio ✔'); } }, '↺ Volver a los ajustes iniciales'))));
   });
 })(window.EQ);

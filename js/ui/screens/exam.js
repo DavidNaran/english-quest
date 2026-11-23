@@ -141,7 +141,7 @@
       if (wordTags.length) rev.appendChild(h('div', null, h('p', null, 'Palabras:'), h('div', { class: 'btn-row' }, wordTags.map(function (t) { var v = EQ.vocab.get(t); return h('a', { class: 'btn secondary small', href: '#/vocab/' + t, lang: 'en' }, v.en); }))));
       if (toReview.indexOf('order') >= 0) rev.appendChild(h('p', null, 'Ordenar frases: ', h('a', { href: '#/practice/sentence' }, 'practica en el cuaderno')));
     }
-    rev.appendChild(h('a', { class: 'btn start-btn block', href: '#/start' }, '🐱 Siguiente con Kiko ▶'));
+    rev.appendChild(h('a', { class: 'btn start-btn block', href: '#/start' }, '🐱 Siguiente con Zarra ▶'));
     rev.appendChild(h('div', { class: 'btn-row' },
       e.wrongIds.length ? h('button', { type: 'button', class: 'btn accent', onclick: function () { d.tmpReview = e.wrongIds.slice(); EQ.store.save(); location.hash = '#/review?ids=last'; } }, '🎯 Practicar mis errores') : null,
       h('a', { class: 'btn exam', href: '#/exam/' + e.exam + '/' + e.mode }, '🔄 Repetir este examen'),

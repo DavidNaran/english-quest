@@ -21,7 +21,7 @@ Está pensada para una niña con dislexia. Lleva letra y espaciado ajustables, a
    - **iPad (Safari)**: botón **Compartir** ⬆️ → **Añadir a pantalla de inicio**.
    - **Android (Chrome)**: menú ⋮ → **Añadir a pantalla de inicio** (o **Instalar aplicación**).
 3. Aparece el icono de la gata 🐱. Desde ahí se abre a pantalla completa y funciona **también sin internet**.
-4. La niña solo tiene que tocar **▶ Empezar**: Kiko le dice qué toca hacer cada día.
+4. La niña solo tiene que tocar **▶ Empezar**: Zarra le dice qué toca hacer cada día.
 
 ### En el ordenador
 Abre la misma dirección, o haz doble clic en `index.html`.
@@ -40,7 +40,7 @@ Los archivos están en el repositorio de GitHub `english-quest`. Al subir cambio
 
 | Sección | Qué contiene |
 |---|---|
-| ▶ **Empezar** | Estudio guiado: Kiko, la gata, propone la siguiente actividad de un camino de 31 pasos (teoría → práctica → exámenes) y retoma lo que quedó a medias. Al terminar cada actividad: **Siguiente con Kiko**. |
+| ▶ **Empezar** | Estudio guiado: Zarra, la gata, propone la siguiente actividad de un camino de 31 pasos (teoría → práctica → exámenes) y retoma lo que quedó a medias. Al terminar cada actividad: **Siguiente con Zarra**. |
 | 🏞️ **Vocabulario** | 20 fichas con dibujo, audio normal y lento, frase de ejemplo, "Escucha y repite" y un mini-reto (reconocer y escribir). Además, **Pasar fichas** y el juego **Unir parejas**. |
 | 🧩 **Gramática** | 8 fichas (Could, Couldn't, Preguntas, Respuestas cortas, And, But, So, Because) en 4 pasos: explicación con esquema, ejemplos y ejercicios resueltos, errores frecuentes y truco, y práctica corregida. |
 | ✏️ **Practicar** | Cuaderno de **190 ejercicios**: 40 de could, 40 de conectores, 60 de vocabulario, 30 de construir frases y 20 mixtos. Están en niveles **Aprendo / Practico / Domino** y se hacen en tandas cortas de 10. También hay una **Práctica sorpresa** adaptativa. |

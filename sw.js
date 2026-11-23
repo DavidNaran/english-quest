@@ -1,6 +1,6 @@
 /* sw.js — Service worker: guarda la app en caché para usarla sin conexión.
    Al cambiar archivos, sube el número de VERSION para que se actualice. */
-var VERSION = 'eq-v2';
+var VERSION = 'eq-v3';
 var FILES = [
   './', 'index.html', 'manifest.webmanifest',
   'css/tokens.css', 'css/app.css', 'css/exercises.css', 'css/print.css',

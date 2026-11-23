@@ -109,7 +109,7 @@
           h('h2', null, '🎉 ¡Has pasado las 20 fichas!'),
           h('p', null, 'Te sabías ' + knew + ' de 20. ⭐ +1 estrella. Las que todavía no, salen primero la próxima vez.'),
           h('div', { class: 'btn-row' },
-            h('a', { class: 'btn', href: '#/start' }, '🐱 Siguiente con Kiko'),
+            h('a', { class: 'btn', href: '#/start' }, '🐱 Siguiente con Zarra'),
             h('button', { type: 'button', class: 'btn secondary', onclick: function () { i = 0; knew = 0; notYet = []; show(); } }, '🔁 Otra vez'),
             h('a', { class: 'btn secondary', href: '#/practice/vocab' }, '✏️ Ejercicios'))));
         EQ.ui.celebrate();
