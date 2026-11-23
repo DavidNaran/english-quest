@@ -1,4 +1,4 @@
-/* start.js — Estudio guiado por Zarra: el botón "Empezar" decide la siguiente actividad.
+/* start.js — Estudio guiado por Nala: el botón "Empezar" decide la siguiente actividad.
    Sigue un camino ordenado (teoría → práctica → examen) y, al terminarlo,
    elige según lo que más le cuesta. Siempre retoma antes lo que quedó a medias. */
 (function (EQ) {
@@ -71,7 +71,7 @@
   EQ.router.add('start', 'Empezar', function (main) {
     var n = next();
     var done = EQ.guided.doneCount();
-    main.appendChild(EQ.ui.pageHead('Estudiar con Zarra', '#/home'));
+    main.appendChild(EQ.ui.pageHead('Estudiar con Nala', '#/home'));
     var text = n.say;
     main.appendChild(EQ.ui.guide(text));
     main.appendChild(h('div', { class: 'card stack start-card' },

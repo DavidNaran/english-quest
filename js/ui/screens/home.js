@@ -10,7 +10,7 @@
     var hello = hour < 14 ? '¡Buenos días!' : hour < 21 ? '¡Buenas tardes!' : '¡Buenas noches!';
     var first = !d.stats.answered;
     main.appendChild(EQ.ui.guide(first
-      ? hello + ' Soy <b>Zarra</b>, tu gata guía 🐱. Vamos a preparar juntas el examen de inglés. Toca <b>Empezar</b> y yo te digo qué hacer.'
+      ? hello + ' Soy <b>Nala</b>, tu gata guía 🐱. Vamos a preparar juntas el examen de inglés. Toca <b>Empezar</b> y yo te digo qué hacer.'
       : hello + ' ¡Qué bien verte otra vez! Ya dominas <b>' + mastered + ' de 20</b> palabras. Toca <b>Empezar</b> y seguimos.', { autoRead: true }));
 
     // Botón principal: estudio guiado (también retoma lo que quedó a medias)
@@ -18,7 +18,7 @@
     main.appendChild(h('a', { class: 'tile start-tile', href: nx.resume ? nx.route : '#/start', 'aria-label': (nx.resume ? 'Continuar: ' : 'Empezar. Siguiente: ') + nx.title },
       h('span', { class: 'start-play', 'aria-hidden': 'true' }, '▶'),
       h('span', null,
-        h('span', { class: 'tile-title' }, nx.resume ? 'Continuar' : (first ? 'Empezar' : 'Empezar con Zarra')),
+        h('span', { class: 'tile-title' }, nx.resume ? 'Continuar' : (first ? 'Empezar' : 'Empezar con Nala')),
         h('br'),
         h('span', { class: 'tile-sub' }, (nx.resume ? '' : 'Hoy toca: ') + nx.title))));
 

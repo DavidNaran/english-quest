@@ -54,7 +54,7 @@
       h('span', { class: 'progress-label' }, text || (value + ' / ' + max)));
   }
 
-  /** Zarra hablando (con botón para leer en voz alta en español). */
+  /** Nala hablando (con botón para leer en voz alta en español). */
   function guide(text, opts) {
     opts = opts || {};
     var plain = String(text).replace(/<[^>]+>/g, '');
