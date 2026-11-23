@@ -1,6 +1,6 @@
 /* sw.js — Service worker: guarda la app en caché para usarla sin conexión.
    Al cambiar archivos, sube el número de VERSION para que se actualice. */
-var VERSION = 'eq-v4';
+var VERSION = 'eq-v5';
 var FILES = [
   './', 'index.html', 'manifest.webmanifest',
   'css/tokens.css', 'css/app.css', 'css/exercises.css', 'css/print.css',
@@ -37,7 +37,8 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(e.request.url);
   if (url.origin !== location.origin) return;
   // Red primero (así llegan las actualizaciones); si no hay conexión, se usa la copia guardada.
-  e.respondWith(fetch(e.request).then(function (res) {
+  // cache: 'no-cache' obliga a preguntar al servidor si hay versión nueva (no usa la caché HTTP de 10 min).
+  e.respondWith(fetch(e.request, { cache: 'no-cache' }).then(function (res) {
     if (res && res.ok) { var copy = res.clone(); caches.open(VERSION).then(function (c) { c.put(e.request, copy); }); }
     return res;
   }).catch(function () {

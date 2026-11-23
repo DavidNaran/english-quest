@@ -13,7 +13,17 @@
   // PWA: solo funciona servida por http(s), no abriendo el archivo directamente
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('Service worker no registrado', e); });
+      navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(function (reg) {
+        reg.update();
+      }).catch(function (e) { console.warn('Service worker no registrado', e); });
+    });
+    // Cuando se instala una versión nueva, recargar una vez para mostrarla (sin perder el progreso).
+    var hadController = !!navigator.serviceWorker.controller, reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (!hadController || reloaded) { hadController = true; return; }
+      reloaded = true;
+      EQ.store.saveNow();
+      location.reload();
     });
   }
 })(window.EQ);
